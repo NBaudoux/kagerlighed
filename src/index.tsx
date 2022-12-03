@@ -8,15 +8,16 @@ const Main: React.FC = () => {
   const tabs = ["Menu", "About me"];
   let i = -1;
 
-  const content = () => {switch(selectedTab){
-  case 0: {
-    console.log("Test "+selectedTab);
-    return <span>{"Text"}</span>;}
-  case 1: 
-    return <span>{"Text Text"}</span>;
-  case 2: 
-    return <span>{"Text Text Text"}</span>;
-  }};
+  const content = () => {
+    switch(selectedTab){
+    case 0: {
+      console.log("Test "+selectedTab);
+      return <span>{"Text"}</span>;}
+    case 1: 
+      return <span>{"Text Text"}</span>;
+    case 2: 
+      return <span>{"Text Text Text"}</span>;
+    }};
 
   const [selectedTab, setSelectedTab] = useState<number>(i+1);
 
