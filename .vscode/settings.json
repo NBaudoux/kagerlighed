@@ -4,5 +4,6 @@
     "source.organizeImports": true
   },
   "eslint.validate": ["typescript"],
-  "editor.formatOnSave": false
+  "editor.formatOnSave": false,
+  "editor.tabSize": 2
 }
