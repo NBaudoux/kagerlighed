@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import HeaderButton from "./headerButton";
 import "./index.less";
+import Menu from "./pages/Menu";
 
 const Main: React.FC = () => {
   const title = "Kagerlighed";
@@ -14,7 +15,7 @@ const Main: React.FC = () => {
       console.log("Test "+selectedTab);
       return <span>{"Text"}</span>;}
     case 1: 
-      return <span>{"Text Text"}</span>;
+      return <Menu/>;
     case 2: 
       return <span>{"Text Text Text"}</span>;
     }};
