@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/kagerlighed/static/js/main.9a4dbc8f.js",
+    "static/media/logo.jpg": "/kagerlighed/static/media/logo.f8e0e667b53b6172ecde.jpg",
+    "index.html": "/kagerlighed/index.html",
+    "main.9a4dbc8f.js.map": "/kagerlighed/static/js/main.9a4dbc8f.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.9a4dbc8f.js"
+  ]
+}
