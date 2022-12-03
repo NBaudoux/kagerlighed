@@ -1,9 +1,31 @@
 @IMG_PATH: "../../shared/img/";
 
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hp-desc {
+  flex: 1;
+}
+
+.slide-container {
+  flex: 2;
+}
+
+.hp-menu{
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .slide-show-img {
   background-size: cover;
   background-position: center;
-  height: 600px;
+  height: 450px;
 }
 
 .lemonpie {
@@ -14,6 +36,28 @@
   background-image: url("@{IMG_PATH}mignardises.jpg");
 }
 
+.parisbrest {
+  background-image: url("@{IMG_PATH}parisbrest.jpg");
+}
+
 .logo {
   background-image: url("@{IMG_PATH}logo.png");
+}
+
+.button {
+  background-color: #008CBA; /* Green */
+  border: none;
+  border-radius: 25px;
+  color: white;
+  padding: 15px 32px;
+  margin-top: 15px;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  &:hover {
+    background-color: #04ace4;
+  }
 }

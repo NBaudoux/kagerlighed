@@ -14,7 +14,7 @@ const HomePage: React.FC = () =>
       </div>
       <div className="slide-container">
         <Slide>
-          {config.slideImages.map((img, i) => (
+          {config.SLIDE_IMAGES.map((img, i) => (
             <div className="each-slide" key={i}>
               <div 
                 className={`slide-show-img ${img.styleName}`} 
