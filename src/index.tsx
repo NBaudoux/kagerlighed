@@ -12,7 +12,6 @@ const Main: React.FC = () => {
   const content = () => {
     switch(selectedTab){
     case 0: {
-      console.log("Test "+selectedTab);
       return <HomePage />;}
     case 1: 
       return <span>{"Here are my cakes"}</span>;
