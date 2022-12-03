@@ -10,7 +10,7 @@ const HomePage: React.FC = () =>
   return (
     <div>
       <div className="hp-desc">
-        <p>{config.desc}</p>
+        {config.desc.map((text, i) => (<p key={i}>{text}</p>))}
       </div>
       <div className="slide-container">
         <Slide>
