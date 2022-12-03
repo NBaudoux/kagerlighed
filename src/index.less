@@ -1,8 +1,11 @@
-@LOGO_PATH: "./shared/img/logo.jpg";
+@import './fonts/moontime.less';
+@import './fonts/DMSans/index.less';
 
 body {
   margin: 0;
   padding: 0;
+
+  font-family: 'DMSans';
 }
 
 .header {
@@ -20,23 +23,27 @@ body {
   flex-direction: row;
 
   .home-shortcut {
-    content: url(@LOGO_PATH);
-
     flex: 1;
-
-    max-width: 20%;
-    object-fit: contain;
-  }
-
-  .title {
-    color: #fff;
     display: flex;
-    flex: 1;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+
+    min-width: 190px;
+    max-width: 15%;
+    object-fit: contain;
+
+    font-family: 'MoonTime';
+    font-size: 50px;
+    color: #ffffff;
+    text-decoration: none;
   }
 }
 
 .content {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 0 12%;
 }
