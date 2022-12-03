@@ -13,6 +13,10 @@ export const SLIDE_IMAGES: SlideImage[] = [
     caption: "Mignardises"
   },
   {
+    styleName: "parisbrest",
+    caption: "Paris-Brest"
+  },
+  {
     styleName: "logo",
     caption: "Kagerlighed"
   }
