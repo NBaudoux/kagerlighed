@@ -5,12 +5,18 @@ import "react-slideshow-image/dist/styles.css";
 import * as config from "./config";
 import "./index.less";
 
-const HomePage: React.FC = () => 
+type HomePageProps = 
 {
+  toMenu: () => void
+}
+
+const HomePage: React.FC<HomePageProps> = (props) => 
+{
+  const { toMenu } = props;
   return (
-    <div>
+    <div className="home-page">
       <div className="hp-desc">
-        {config.desc.map((text, i) => (<p key={i}>{text}</p>))}
+        {config.DESC.map((text, i) => (<p key={i}>{text}</p>))}
       </div>
       <div className="slide-container">
         <Slide>
@@ -23,6 +29,9 @@ const HomePage: React.FC = () =>
             </div>
           ))}
         </Slide>
+      </div>
+      <div className="hp-menu">
+        <button className="button" onClick={toMenu}>{config.MENU}</button>
       </div>
     </div>
   );

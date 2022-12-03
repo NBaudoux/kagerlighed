@@ -12,7 +12,7 @@ const Main: React.FC = () => {
   const content = () => {
     switch(selectedTab){
     case 0: {
-      return <HomePage />;}
+      return <HomePage toMenu={() => setSelectedTab(1)}/>;}
     case 1: 
       return <span>{"Here are my cakes"}</span>;
     case 2: 

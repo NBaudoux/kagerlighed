@@ -22,6 +22,7 @@ export const SLIDE_IMAGES: SlideImage[] = [
   }
 ];
 
+export const MENU = "Get a look at the menu";
 export const DESC = [
   "My name is Eloïse, I am a Belgian-French pastry chef. I started baking when I was a little girl.", 
   "With time, my hobby turned into a passion, which after 4 years of studying became my job. My aim is to share this passion and spread happiness with my cakes.", 
