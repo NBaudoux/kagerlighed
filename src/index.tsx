@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import HeaderButton from "./headerButton";
 import "./index.less";
+import HomePage from "./pages/HomePage";
 
 const Main: React.FC = () => {
   const title = "Kagerlighed";
-  const tabs = ["Menu", "About me"];
+  const tabs = ["Home", "Menu", "About me"];
   let i = -1;
 
   const content = () => {
     switch(selectedTab){
     case 0: {
-      console.log("Test "+selectedTab);
-      return <span>{"Text"}</span>;}
+      return <HomePage toMenu={() => setSelectedTab(1)}/>;}
     case 1: 
-      return <span>{"Text Text"}</span>;
+      return <span>{"Here are my cakes"}</span>;
     case 2: 
       return <span>{"Text Text Text"}</span>;
     }};
