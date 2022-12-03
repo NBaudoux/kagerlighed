@@ -16,9 +16,10 @@ const HomePage: React.FC = () =>
         <Slide>
           {config.slideImages.map((img, i) => (
             <div className="each-slide" key={i}>
-              <div className={`slide-show-img ${img.styleName}`}>
-                <span>{img.caption}</span>
-              </div>
+              <div 
+                className={`slide-show-img ${img.styleName}`} 
+                title={img.caption}
+              />
             </div>
           ))}
         </Slide>
