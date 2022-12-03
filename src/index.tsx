@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import HeaderButton from "./headerButton";
 import "./index.less";
 import HomePage from "./pages/HomePage";
+import Menu from "./pages/Menu";
 
 const Main: React.FC = () => {
   const title = "Kagerlighed";
@@ -14,7 +15,7 @@ const Main: React.FC = () => {
     case 0: {
       return <HomePage toMenu={() => setSelectedTab(1)}/>;}
     case 1: 
-      return <span>{"Here are my cakes"}</span>;
+      return <Menu/>;
     case 2: 
       return <span>{"Text Text Text"}</span>;
     }};
