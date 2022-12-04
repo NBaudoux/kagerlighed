@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import HeaderButton from "./headerButton";
 import "./index.less";
+import About from "./pages/About";
 import HomePage from "./pages/HomePage";
 import Menu from "./pages/Menu";
 
@@ -17,7 +18,7 @@ const Main: React.FC = () => {
     case 1: 
       return <Menu/>;
     case 2: 
-      return <span>{"Text Text Text"}</span>;
+      return <About />;
     }};
 
   const [selectedTab, setSelectedTab] = useState<number>(i+1);
