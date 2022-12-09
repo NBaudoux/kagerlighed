@@ -3,7 +3,7 @@ import React from "react";
 import * as config from "./config";
 import "./images.less";
 import "./index.less";
-import MenuItem from "./MenuItem";
+import MenuItem from "./MenuItem/MenuItem";
 
 const Menu: React.FC = () => {
   return (
