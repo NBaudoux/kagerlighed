@@ -10,18 +10,18 @@ type CounterProps = {
 const Counter: React.FC<CounterProps> = (props) => {
   const { number, setNumber } = props;
 
-  const updateBasketItem = (x: number) => {
+  const updateNumber = (x: number) => {
     if (number + x < 0) return;
     setNumber(number + x);
   };
 
   return(
     <div className="counter">
-      <button className="counter-button" onClick={() => updateBasketItem(-1)}>
+      <button className="counter-button" onClick={() => updateNumber(-1)}>
         <FontAwesomeIcon icon={faMinus} />
       </button>
       <span>{number}</span>
-      <button className="counter-button" onClick={() => updateBasketItem(1)}>
+      <button className="counter-button" onClick={() => updateNumber(1)}>
         <FontAwesomeIcon icon={faPlus} />
       </button>
     </div>
