@@ -36,6 +36,7 @@ const MenuItem: React.FC<MenuItemProps> = (props) => {
         </div>
         <div className="mi-desc">{description}</div>
         <div className="mi-price">
+          {props.children}
           <span>{price}</span>
         </div>
       </div>
