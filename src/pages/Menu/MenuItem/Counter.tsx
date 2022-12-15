@@ -22,7 +22,7 @@ const Counter: React.FC<CounterProps> = (props) => {
       <button className="counter-button" disabled={number === 0} onClick={() => updateNumber(-1)}>
         <FontAwesomeIcon icon={faMinus} />
       </button>
-      <div className="counter-number">{number}</div>
+      <input className="counter-number" defaultValue={number} />
       <button className="counter-button" onClick={() => updateNumber(1)}>
         <FontAwesomeIcon icon={faPlus} />
       </button>
