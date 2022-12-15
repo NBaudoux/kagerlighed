@@ -7,7 +7,3 @@ export const CV = [
   "Now in Denmark, I would like to share my passion and my cakes to everyone who wants to discover and enjoy French pastry. The most important thing to me: Everything is HOMEMADE!",
   "My menu consists mostly of classics and timeless French specialities and I look forward to expand my selection. So keep an eye on it!","And come taste a bit of France!",
   "Eloïse"];
-
-export const FB_LINK = "https://www.facebook.com/kagerlighedkbh";
-export const INSTA_LINK = "https://www.instagram.com/kagerlighed.kbh/?igshid=YmMyMTA2M2Y%3D";
-export const KAGERLIGHED_KBH = "kagerlighed.kbh";
