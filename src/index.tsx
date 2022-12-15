@@ -1,10 +1,17 @@
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+
 import HeaderButton from "./headerButton";
 import "./index.less";
 import About from "./pages/About";
 import HomePage from "./pages/HomePage";
 import Menu from "./pages/Menu";
+
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import * as config from "./config";
+import * as social from "./shared/config/socialLinks";
 
 const Main: React.FC = () => {
   const title = "Kagerlighed";
@@ -34,6 +41,37 @@ const Main: React.FC = () => {
       </div>
       <div className="content">
         {content()}
+      </div>
+      <div className="bottom">
+        <div>
+          <a className="about-link" href={config.PHONE_LINK}>
+            <FontAwesomeIcon className="link-icon" icon={faPhone} />
+            {config.PHONE}
+          </a>
+        </div>
+        <div>
+          <a className="about-link" href={config.MAIL_LINK}>
+            <FontAwesomeIcon className="link-icon" icon={faEnvelope} />
+            {config.MAIL}
+          </a>
+        </div>
+        <div>
+          <a className="about-link" href={social.INSTA_LINK}>
+            <FontAwesomeIcon className="link-icon" icon={faInstagram}/> 
+            {social.KAGERLIGHED_KBH}
+          </a>
+        </div>
+        <div>
+          <a className="about-link" href={social.FB_LINK}>
+            <FontAwesomeIcon className="link-icon" icon={faFacebook}/> 
+            {social.KAGERLIGHED_KBH}
+          </a>
+        </div>
+        <div>
+          <a className="about-link" href={config.CVR_LINK}>
+            {config.CVR}
+          </a>
+        </div>
       </div>
     </>
   );

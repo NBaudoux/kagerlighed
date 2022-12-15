@@ -43,9 +43,42 @@ body {
 
 .content {
   position: relative;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+
   margin: 0 12%;
+  min-height: calc(100vh - 96px);
+}
+
+.bottom {
+  position: sticky;
+  bottom: 0;
+  margin-top: 5px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+
+  min-height: 15px;
+  width: 100%;
+
+  padding: 5px 0;
+  white-space: nowrap;
+
+  .about-link {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .link-icon {
+    margin: 0 5px;
+  }
 }

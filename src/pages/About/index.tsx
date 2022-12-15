@@ -4,6 +4,7 @@ import React, { Fragment } from "react";
 
 import "./index.less";
 
+import * as social from "../../shared/config/socialLinks";
 import * as config from "./config";
 
 const About: React.FC = () => {
@@ -13,13 +14,13 @@ const About: React.FC = () => {
         {config.CV.map((text, i) => (<p key={i}>{text}</p>))}
       </div>
       <div className="about-links">
-        <a className="about-link" href={config.INSTA_LINK}>
+        <a className="about-link" href={social.INSTA_LINK}>
           <FontAwesomeIcon icon={faInstagram}/> 
-          {config.KAGERLIGHED_KBH}
+          {social.KAGERLIGHED_KBH}
         </a>
-        <a className="about-link" href={config.FB_LINK}>
+        <a className="about-link" href={social.FB_LINK}>
           <FontAwesomeIcon icon={faFacebook}/> 
-          {config.KAGERLIGHED_KBH}
+          {social.KAGERLIGHED_KBH}
         </a>
       </div>
     </Fragment>
