@@ -8,7 +8,7 @@ import MenuItem from "./MenuItem";
 const Menu: React.FC = () => {
   return (
     <div className="menu">
-      <span>{config.ORDER}</span>
+      <p>{config.ORDER}</p>
       {config.ITEMS.map((item, i) => (
         <MenuItem key={i} {...item} />
       ))}
