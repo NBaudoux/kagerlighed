@@ -11,5 +11,5 @@ export const CV = [
   "After 4 years, I finally graduated from pastry, bakery, chocolate making, ice cream making and confectionery.",
   "During those years I worked in several pastry and chocolate places in Belgium, learning new techniques and improving my creativity.",
   "Now in Denmark, I would like to share my passion and my cakes to everyone who wants to discover and enjoy French pastry. The most important thing to me: Everything is HOMEMADE!",
-  "My menu consists mostly of classics and timeless French specialities and I look forward to expand my selection. So keep an eye on it!","And come taste a bit of France!",
-  "Eloïse"];
+  "My menu consists mostly of classics and timeless French specialities and I look forward to expand my selection. So keep an eye on it!","And come taste a bit of France!"
+];

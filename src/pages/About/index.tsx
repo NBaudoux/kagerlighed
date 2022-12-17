@@ -13,6 +13,7 @@ const About: React.FC = () => {
       <div>
         <div className="eloise" />
         {config.CV.map((text, i) => (<p key={i}>{text}</p>))}
+        <p className="moontime-font">Eloise</p>
       </div>
       <div className="about-links">
         <a className="about-link" href={social.INSTA_LINK}>
