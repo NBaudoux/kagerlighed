@@ -15,8 +15,6 @@ import * as social from "./shared/config/socialLinks";
 
 const Main: React.FC = () => {
   const title = "Kagerlighed";
-  const tabs = ["Home", "Menu", "About me"];
-  let i = -1;
 
   const content = () => {
     switch(selectedTab){
@@ -28,15 +26,14 @@ const Main: React.FC = () => {
       return <About />;
     }};
 
-  const [selectedTab, setSelectedTab] = useState<number>(i+1);
+  const [selectedTab, setSelectedTab] = useState<number>(0);
 
   return (
     <>
       <div className="header">
         <a href="index" className="home-shortcut">{title}</a>
-        {tabs.map((tab) => {
-          i++;
-          return <HeaderButton index={i} key={i} link="" selected={selectedTab} setSelected={setSelectedTab} value={tab} />;
+        {config.tabs.map((tab, i) => {
+          return <HeaderButton icon={tab.icon} index={i} key={`TAB_${i}`} selected={selectedTab} setSelected={setSelectedTab} value={tab.text} />;
         })}
       </div>
       <div className="content">
