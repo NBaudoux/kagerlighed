@@ -46,30 +46,30 @@ const Main: React.FC = () => {
         <div>
           <a className="about-link" href={config.PHONE_LINK}>
             <FontAwesomeIcon className="link-icon" icon={faPhone} />
-            {config.PHONE}
+            <span>{config.PHONE}</span>
           </a>
         </div>
         <div>
           <a className="about-link" href={config.MAIL_LINK}>
             <FontAwesomeIcon className="link-icon" icon={faEnvelope} />
-            {config.MAIL}
+            <span className="auto-hide">{config.MAIL}</span>
           </a>
         </div>
         <div>
           <a className="about-link" href={social.INSTA_LINK}>
             <FontAwesomeIcon className="link-icon" icon={faInstagram}/> 
-            {social.KAGERLIGHED_KBH}
+            <span className="auto-hide">{social.KAGERLIGHED_KBH}</span>
           </a>
         </div>
         <div>
           <a className="about-link" href={social.FB_LINK}>
             <FontAwesomeIcon className="link-icon" icon={faFacebook}/> 
-            {social.KAGERLIGHED_KBH}
+            <span className="auto-hide">{social.KAGERLIGHED_KBH}</span>
           </a>
         </div>
         <div>
           <a className="about-link" href={config.CVR_LINK}>
-            {config.CVR}
+            <span>{config.CVR}</span>
           </a>
         </div>
       </div>
