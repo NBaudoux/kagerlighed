@@ -16,11 +16,11 @@ const About: React.FC = () => {
       </div>
       <div className="about-links">
         <a className="about-link" href={social.INSTA_LINK}>
-          <FontAwesomeIcon icon={faInstagram}/> 
+          <FontAwesomeIcon className="link-icon" icon={faInstagram}/> 
           {social.KAGERLIGHED_KBH}
         </a>
         <a className="about-link" href={social.FB_LINK}>
-          <FontAwesomeIcon icon={faFacebook}/> 
+          <FontAwesomeIcon className="link-icon" icon={faFacebook}/> 
           {social.KAGERLIGHED_KBH}
         </a>
       </div>
