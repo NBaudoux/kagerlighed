@@ -16,7 +16,7 @@ const HeaderLink: React.FC<HeaderLinkProps> = (props) => {
 
   return(
     <div title={text}>
-      <a className="about-link" href={link}>
+      <a className="header-link" href={link}>
         {(icon ? <FontAwesomeIcon className="link-icon" icon={icon} /> : null)}
         <span className={autoHide? "auto-hide" : ""}>{text}</span>
       </a>
