@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.013f3cbc.css",
-    "main.js": "./static/js/main.d3e5ec30.js",
+    "main.js": "./static/js/main.dfe2173f.js",
     "static/media/lemon_pie1.jpg": "./static/media/lemon_pie1.540910582af40422fb34.jpg",
     "static/media/galette.jpg": "./static/media/galette.811f60263bea59cfa7d7.jpg",
     "static/media/parisbrest.jpg": "./static/media/parisbrest.f58e5ae26c7cb27b842a.jpg",
     "static/media/chocolate_caramel.jpg": "./static/media/chocolate_caramel.3d2af18efc401fb2cb47.jpg",
     "static/media/mignardises.jpg": "./static/media/mignardises.6044bc501bbacb395e77.jpg",
     "static/media/logo.png": "./static/media/logo.2bffb85dc46e91de1135.png",
+    "static/media/eloise.jpg": "./static/media/eloise.1109f7a3a934f9177381.jpg",
     "static/media/raspberry_macaron.jpg": "./static/media/raspberry_macaron.64f884b2e2eb5e29fa50.jpg",
     "static/media/DMSans-Italic.ttf": "./static/media/DMSans-Italic.bfe023d2d0f8f749d319.ttf",
     "static/media/DMSans-BoldItalic.ttf": "./static/media/DMSans-BoldItalic.4d8bbef07cd86c84abbf.ttf",
@@ -19,13 +20,14 @@
     "static/media/chocolate_tonka.jpg": "./static/media/chocolate_tonka.36c46a22ee1834834ce9.jpg",
     "static/media/charlotte.jpg": "./static/media/charlotte.aeffd5ac9884c10fb837.jpg",
     "static/media/MoonTime-Regular.ttf": "./static/media/MoonTime-Regular.b83db42eb10b3fc7bd0f.ttf",
+    "static/media/logo1.jpg": "./static/media/logo1.364663fdf2261ca4b45c.jpg",
     "static/media/MoonTime-Regular.otf": "./static/media/MoonTime-Regular.a420eaa4638d6143b3cc.otf",
     "index.html": "./index.html",
     "main.013f3cbc.css.map": "./static/css/main.013f3cbc.css.map",
-    "main.d3e5ec30.js.map": "./static/js/main.d3e5ec30.js.map"
+    "main.dfe2173f.js.map": "./static/js/main.dfe2173f.js.map"
   },
   "entrypoints": [
     "static/css/main.013f3cbc.css",
-    "static/js/main.d3e5ec30.js"
+    "static/js/main.dfe2173f.js"
   ]
 }
