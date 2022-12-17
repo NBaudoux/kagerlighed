@@ -16,6 +16,7 @@ const HomePage: React.FC<HomePageProps> = (props) =>
   return (
     <div className="home-page">
       <div className="hp-desc">
+        <div className="logo1"/>
         {config.DESC.map((text, i) => (<p key={i}>{text}</p>))}
       </div>
       <div className="slide-container">

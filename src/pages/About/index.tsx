@@ -11,6 +11,7 @@ const About: React.FC = () => {
   return (
     <Fragment>
       <div>
+        <div className="eloise" />
         {config.CV.map((text, i) => (<p key={i}>{text}</p>))}
       </div>
       <div className="about-links">
