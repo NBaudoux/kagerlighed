@@ -18,7 +18,10 @@ const Menu: React.FC = () => {
 
   return (
     <div className="menu">
-      <p>{config.ORDER}</p>
+      <div>
+        <p>{config.ORDER}</p>
+        <p>{config.DELIVERY}</p>
+      </div>
       {config.ITEMS.map((item, i) => (
         <MenuItem key={i} {...item} >
           <Counter 

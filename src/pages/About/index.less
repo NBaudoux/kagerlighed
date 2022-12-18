@@ -1,3 +1,6 @@
+@IMG_PATH: "../../shared/img/";
+@import "../../fonts/MoonTime/moontime.less";
+
 .about-link {
   color: #000000;
   text-decoration: none;
@@ -6,4 +9,25 @@
 .about-links {
   display: flex;
   justify-content: space-evenly;
+
+  .link-icon {
+    margin: 0 5px;
+  }
+}
+
+.eloise {
+  background-image: url("@{IMG_PATH}eloise.jpg");
+  background-size: cover;
+  background-position: center;
+
+  float: left;
+  height: 250px;
+  width: 170px;
+
+  margin: 20px 10px 0 0;
+}
+
+.moontime-font {
+  font-family: "MoonTime";
+  font-size: 50px;
 }

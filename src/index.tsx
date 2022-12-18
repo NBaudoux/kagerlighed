@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import HeaderButton from "./headerButton";
-import "./index.less";
+
+import HeaderButton from "./components/HeaderButton/HeaderButton";
+import HeaderLink from "./components/HeaderLink/HeaderLink";
+
 import About from "./pages/About";
 import HomePage from "./pages/HomePage";
 import Menu from "./pages/Menu";
 
+import * as config from "./config";
+import "./index.less";
+
 const Main: React.FC = () => {
   const title = "Kagerlighed";
-  const tabs = ["Home", "Menu", "About me"];
-  let i = -1;
 
   const content = () => {
     switch(selectedTab){
@@ -21,19 +24,39 @@ const Main: React.FC = () => {
       return <About />;
     }};
 
-  const [selectedTab, setSelectedTab] = useState<number>(i+1);
+  const [selectedTab, setSelectedTab] = useState<number>(0);
 
   return (
     <>
       <div className="header">
         <a href="index" className="home-shortcut">{title}</a>
-        {tabs.map((tab) => {
-          i++;
-          return <HeaderButton index={i} key={i} link="" selected={selectedTab} setSelected={setSelectedTab} value={tab} />;
+        {config.TABS.map((tab, i) => {
+          return (
+            <HeaderButton 
+              icon={tab.icon} 
+              index={i} 
+              key={`TAB_${i}`} 
+              selected={selectedTab} 
+              setSelected={setSelectedTab} 
+              value={tab.text} 
+            />);
         })}
       </div>
       <div className="content">
         {content()}
+      </div>
+      <div className="bottom">
+        {config.LINKS.map((link, i) => {
+          return(
+            <HeaderLink
+              autoHide={link.autoHide}
+              icon={link.icon}
+              key={`LINK_${i}`}
+              link={link.link}
+              text={link.text}
+            />
+          );
+        })}
       </div>
     </>
   );

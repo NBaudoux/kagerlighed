@@ -4,22 +4,25 @@ import React, { Fragment } from "react";
 
 import "./index.less";
 
+import * as social from "../../shared/config/socialLinks";
 import * as config from "./config";
 
 const About: React.FC = () => {
   return (
     <Fragment>
       <div>
+        <div className="eloise" />
         {config.CV.map((text, i) => (<p key={i}>{text}</p>))}
+        <p className="moontime-font">Eloise</p>
       </div>
       <div className="about-links">
-        <a className="about-link" href={config.INSTA_LINK}>
-          <FontAwesomeIcon icon={faInstagram}/> 
-          {config.KAGERLIGHED_KBH}
+        <a className="about-link" href={social.INSTA_LINK}>
+          <FontAwesomeIcon className="link-icon" icon={faInstagram}/> 
+          {social.KAGERLIGHED_KBH}
         </a>
-        <a className="about-link" href={config.FB_LINK}>
-          <FontAwesomeIcon icon={faFacebook}/> 
-          {config.KAGERLIGHED_KBH}
+        <a className="about-link" href={social.FB_LINK}>
+          <FontAwesomeIcon className="link-icon" icon={faFacebook}/> 
+          {social.KAGERLIGHED_KBH}
         </a>
       </div>
     </Fragment>
