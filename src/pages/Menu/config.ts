@@ -5,6 +5,7 @@ export const BASKET_KEY = "BasketKey";
 
 export const ORDER =  `Place order by contacting us: ${MAIL} / ${PHONE}. Orders must be placed at least 1 week beforehand, 3 weeks for orders having more than 2 kinds of cakes.`;
 export const DELIVERY = "We deliver in Copenhagen and Frederiksberg communes all days between 5 and 9 pm for 50 DKK. Orders can also be picked up at the atelier close to Øresund metro station.";
+export const MIN_NUMBER_TEXT = (x: number) => ` (min. ${x} pieces)`;
 
 export const ITEMS: MenuItemProps[] = [
   {
@@ -57,8 +58,9 @@ export const ITEMS: MenuItemProps[] = [
   },
   {
     imageClassName: "mignardises",
-    title: "Mignardises (min. 50 pieces)",
+    title: "Mignardises",
     description: "Small cakes for your birthday party or office event, easy to eat and enjoy. A mix of classic lemon/meringue pie, the chocolate/caramel tart and the pistachio and raspberry financier.",
-    price: "(pr. piece) 15 DKK"
+    price: "(pr. piece) 15 DKK", 
+    minNumber: 50
   }
 ];

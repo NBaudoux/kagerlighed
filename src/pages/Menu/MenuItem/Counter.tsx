@@ -11,34 +11,35 @@ type CounterProps = {
 };
 
 const Counter: React.FC<CounterProps> = (props) => {
-  const { number, setNumber, minNumber } = props;
+  const { number, setNumber } = props;
+  const minNumber = props.minNumber ?? 0;
 
   const addToNumber = (x: number) => {
-    const currentValue = number ?? 0;
-    if (currentValue + x < (minNumber ?? 0)) return;
+    const currentValue = number ?? minNumber;
+    if (currentValue + x < minNumber) return;
     setNumber(currentValue + x);
   };
 
-  const updateNumberFromString = (x: string) => {
+  const updateNumberFromString = (x: string, resetUnvalidValue: boolean) => {
     if (x === "") {
-      setNumber(null);
+      setNumber(resetUnvalidValue ? minNumber : null);
     }
     else {
       const value = parseInt(x);
       if (isNaN(value) || value < 0) return;
-      setNumber(value);
+      setNumber(resetUnvalidValue && value < minNumber ? minNumber : value);
     }
   };
 
   return(
     <div className="counter">
-      <button className="counter-button" disabled={number === (minNumber ?? 0) || !number} onClick={() => addToNumber(-1)}>
+      <button className="counter-button" disabled={number === minNumber || !number} onClick={() => addToNumber(-1)}>
         <FontAwesomeIcon icon={faMinus} />
       </button>
       <input 
         className="counter-number" 
-        onBlur={(e) => updateNumberFromString(e.target.value !== "" ? e.target.value : "0")}
-        onChange={(e) => updateNumberFromString(e.target.value)}
+        onBlur={(e) => updateNumberFromString(e.target.value, true)}
+        onChange={(e) => updateNumberFromString(e.target.value, false)}
         onKeyDown={(e) => e.key === "ArrowUp" ? addToNumber(1) : e.key === "ArrowDown" ? addToNumber(-1) : null }
         value={number ?? ""} 
       />

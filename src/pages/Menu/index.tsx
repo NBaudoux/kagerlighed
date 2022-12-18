@@ -8,7 +8,7 @@ import Counter from "./MenuItem/Counter";
 import MenuItem from "./MenuItem/MenuItem";
 
 const Menu: React.FC = () => {
-  const [basket, setBasket] = useSessionStorage<(number | null)[]>(config.BASKET_KEY, config.ITEMS.map(() => 0));
+  const [basket, setBasket] = useSessionStorage<(number | null)[]>(config.BASKET_KEY, config.ITEMS.map((item) => item.minNumber ?? 0));
 
   const updateBasket = (i: number, value: number | null) => {
     const newBasket = [...basket];
@@ -27,6 +27,7 @@ const Menu: React.FC = () => {
           <Counter 
             number={basket[i]}
             setNumber={(x) => updateBasket(i, x)}
+            minNumber={item.minNumber}
           />
         </MenuItem>
       ))}
