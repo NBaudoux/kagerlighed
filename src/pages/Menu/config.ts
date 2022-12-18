@@ -1,5 +1,5 @@
 import { MAIL, PHONE } from "../../config";
-import { MenuItemProps } from "./MenuItem";
+import { MenuItemProps } from "./MenuItem/MenuItem";
 
 export const BASKET_KEY = "BasketKey";
 
