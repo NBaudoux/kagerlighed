@@ -7,14 +7,15 @@ import "./Counter.less";
 type CounterProps = {
   number: number | null,
   setNumber: (x: number | null) => void
+  minNumber?: number
 };
 
 const Counter: React.FC<CounterProps> = (props) => {
-  const { number, setNumber } = props;
+  const { number, setNumber, minNumber } = props;
 
   const addToNumber = (x: number) => {
     const currentValue = number ?? 0;
-    if (currentValue + x < 0) return;
+    if (currentValue + x < (minNumber ?? 0)) return;
     setNumber(currentValue + x);
   };
 
@@ -31,12 +32,12 @@ const Counter: React.FC<CounterProps> = (props) => {
 
   return(
     <div className="counter">
-      <button className="counter-button" disabled={number === 0} onClick={() => addToNumber(-1)}>
+      <button className="counter-button" disabled={number === (minNumber ?? 0) || !number} onClick={() => addToNumber(-1)}>
         <FontAwesomeIcon icon={faMinus} />
       </button>
       <input 
         className="counter-number" 
-        onBlur={(e) => updateNumberFromString(e.target.value)}
+        onBlur={(e) => updateNumberFromString(e.target.value !== "" ? e.target.value : "0")}
         onChange={(e) => updateNumberFromString(e.target.value)}
         onKeyDown={(e) => e.key === "ArrowUp" ? addToNumber(1) : e.key === "ArrowDown" ? addToNumber(-1) : null }
         value={number ?? ""} 
