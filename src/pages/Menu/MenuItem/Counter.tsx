@@ -33,7 +33,11 @@ const Counter: React.FC<CounterProps> = (props) => {
 
   return(
     <div className="counter">
-      <button className="counter-button" disabled={number === minNumber || !number} onClick={() => addToNumber(-1)}>
+      <button 
+        className="counter-button" 
+        disabled={number === minNumber || !number} 
+        onClick={() => addToNumber(-1)}
+      >
         <FontAwesomeIcon icon={faMinus} />
       </button>
       <input 
