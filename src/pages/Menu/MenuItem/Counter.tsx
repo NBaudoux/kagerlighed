@@ -27,7 +27,11 @@ const Counter: React.FC<CounterProps> = (props) => {
     else {
       const value = parseInt(x);
       if (isNaN(value) || value < 0) return;
-      setNumber(resetUnvalidValue && value < minNumber ? minNumber : value);
+      setNumber(
+        resetUnvalidValue && value !== 0 && value < minNumber 
+          ? minNumber 
+          : value
+      );
     }
   };
 
