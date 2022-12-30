@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
 import HeaderButton from "./components/HeaderButton/HeaderButton";
@@ -23,6 +23,10 @@ const Main: React.FC = () => {
     }};
 
   const [selectedTab, setSelectedTab] = useState<number>(0);
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, [selectedTab]);
 
   return (
     <>
