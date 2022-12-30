@@ -1,18 +1,27 @@
 @IMG_PATH: "../../shared/img/";
 
 .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .m-display, .m-arrows {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.m-display button{
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  &.active {
+    color: #008CBA;
+  }
 }
 
 .mi-text {
-    margin-left: 15px;
+  margin-left: 15px;
 }
