@@ -14,6 +14,8 @@ const MAIL_LINK = `mailto: ${MAIL}`;
 export const PHONE = "+45 50 20 38 55";
 const PHONE_LINK = "tel:+4550203855";
 
+export const TITLE = "Kagerlighed";
+
 export const LINKS: HeaderLinkProps[] = [
   { icon: faPhone, link: PHONE_LINK, text: PHONE },
   { autoHide: true, icon: faEnvelope, link: MAIL_LINK, text: MAIL },

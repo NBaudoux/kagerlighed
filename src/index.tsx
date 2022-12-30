@@ -12,8 +12,6 @@ import * as config from "./config";
 import "./index.less";
 
 const Main: React.FC = () => {
-  const title = "Kagerlighed";
-
   const content = () => {
     switch(selectedTab){
     case 0: {
@@ -29,7 +27,7 @@ const Main: React.FC = () => {
   return (
     <>
       <div className="header">
-        <a href="index" className="home-shortcut">{title}</a>
+        <a href="index" className="home-shortcut">{config.TITLE}</a>
         {config.TABS.map((tab, i) => {
           return (
             <HeaderButton 
