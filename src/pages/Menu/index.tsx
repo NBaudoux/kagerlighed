@@ -26,10 +26,16 @@ const Menu: React.FC = () => {
         <p>{config.DELIVERY}</p>
       </div>
       <div className="m-display">
-        <button className={!fullscreenMenu? "active" : ""} onClick={() => setFullscreenMenu(false)}>
+        <button 
+          className={!fullscreenMenu? "active" : ""} 
+          onClick={() => setFullscreenMenu(false)}
+        >
           <FontAwesomeIcon icon={faList} />
         </button>
-        <button className={fullscreenMenu? "active" : ""} onClick={() => setFullscreenMenu(true)}>
+        <button 
+          className={fullscreenMenu? "active" : ""} 
+          onClick={() => setFullscreenMenu(true)}
+        >
           <FontAwesomeIcon icon={faImages} />
         </button>
       </div>
