@@ -43,7 +43,7 @@ const Menu: React.FC = () => {
         fullscreenMenu && currentItem != null
           ? (
             <Fragment>
-              <MenuItem fullscreen {...currentItem} />
+              <MenuItem key={currentItemIndex} fullscreen {...currentItem} />
               <div className="m-arrows">
                 <button onClick={() => updateCurrentItemIndex(-1)}>
                   <FontAwesomeIcon icon={faArrowLeft} />

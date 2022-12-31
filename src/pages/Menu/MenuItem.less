@@ -1,3 +1,12 @@
+@keyframes toggleIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .menu-item {
   display: flex;
   flex-direction: row;
@@ -33,6 +42,7 @@
   min-height: 60vh;
 
   border-bottom: none;
+  animation: toggleIn 1s 1;
 }
 
 .popup-content {
