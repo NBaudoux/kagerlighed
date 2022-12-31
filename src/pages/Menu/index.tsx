@@ -8,7 +8,7 @@ import "./index.less";
 import MenuItem, { MenuItemProps } from "./MenuItem";
 
 const Menu: React.FC = () => {
-  const [fullscreenMenu, setFullscreenMenu] = useState(true);
+  const [fullscreenMenu, setFullscreenMenu] = useState(window.innerWidth >= config.SCREEN_SIZE);
   const [currentItemIndex, setCurrentItemIndex] = useState<number>(0);
 
   const updateCurrentItemIndex = (direction: -1 | 1): void => {
