@@ -1,6 +1,6 @@
 import { faArrowLeft, faArrowRight, faImages, faList } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { Fragment, useMemo, useState } from "react";
+import React, { Fragment, useEffect, useMemo, useState } from "react";
 
 import * as config from "./config";
 import "./images.less";
@@ -14,10 +14,24 @@ const Menu: React.FC = () => {
   const updateCurrentItemIndex = (direction: -1 | 1): void => {
     setCurrentItemIndex((currentItemIndex + direction) % config.ITEMS.length);
   };
+
+  const handleKeyEvent = (e: KeyboardEvent) => {
+    if (!fullscreenMenu) return;
+    e.key === "ArrowLeft"
+      ? updateCurrentItemIndex(-1)
+      : e.key === "ArrowRight"
+        ? updateCurrentItemIndex(1)
+        : null;
+  };
   
   const currentItem: MenuItemProps | undefined = useMemo(() => 
     config.ITEMS.at(currentItemIndex)
   , [currentItemIndex]);
+
+  useEffect(() => {
+    window.addEventListener("keyup", handleKeyEvent);
+    return () => window.removeEventListener("keyup", handleKeyEvent);
+  }, [handleKeyEvent]);
 
   return (
     <div className="menu">
