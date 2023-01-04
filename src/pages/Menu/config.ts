@@ -8,12 +8,6 @@ export const DELIVERY = "We deliver in Copenhagen and Frederiksberg communes all
 
 export const ITEMS: MenuItemProps[] = [
   {
-    imageClassName: "galette",
-    title: "Galette des rois",
-    description: "Honouring an old tradition of the Epiphany, this cake is available in 3 flavours: Classic almond-vanilla, chocolate-haselnut or chestnut. We are delivering the 'Galette des rois' on the 6th, 7th and 8th January 2023. ",
-    price: "250 DKK (6 persons)"
-  },
-  {
     imageClassName: "lemonpie",
     title: "Lemon pie",
     description: "With its refreshing taste of lemon and its sweet meringue on top, this small pie is the perfect combination between acidity and sweetness.", 
