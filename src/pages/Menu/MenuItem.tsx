@@ -19,7 +19,11 @@ const MenuItem: React.FC<MenuItemProps> = (props) => {
 
   return (
     <div className={`menu-item${fullscreen? " mi-fullscreen" : ""}`}>
-      <div className={`mi-image ${imageClassName}`} onClick={() => setOpen(!open)} />
+      <div 
+        className={`mi-image ${imageClassName}`} 
+        onClick={() => setOpen(!open)} 
+        title={title}
+      />
       <Popup
         open={open}
         onClose={() => setOpen(false)}
