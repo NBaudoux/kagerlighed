@@ -1,6 +1,7 @@
 import { faArrowLeft, faArrowRight, faImages, faList } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { Fragment, useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
+import SlideDiv, { Direction } from "../../shared/components";
 
 import * as config from "./config";
 import "./images.less";
@@ -11,17 +12,18 @@ const Menu: React.FC = () => {
   const [fullscreenMenu, setFullscreenMenu] = useState(window.innerWidth >= config.SCREEN_SIZE);
   const [currentItemIndex, setCurrentItemIndex] = useState<number>(0);
 
-  const updateCurrentItemIndex = (direction: -1 | 1): void => {
+  const updateCurrentItemIndex = (direction: Direction): void => {
     setCurrentItemIndex((currentItemIndex + direction) % config.ITEMS.length);
   };
 
   const handleKeyEvent = (e: KeyboardEvent) => {
     if (!fullscreenMenu) return;
-    e.key === "ArrowLeft"
-      ? updateCurrentItemIndex(-1)
-      : e.key === "ArrowRight"
-        ? updateCurrentItemIndex(1)
-        : null;
+    if (e.key === "ArrowLeft") {
+      updateCurrentItemIndex(Direction.Left);
+    }
+    else if (e.key === "ArrowRight") {
+      updateCurrentItemIndex(Direction.Right);
+    }
   };
   
   const currentItem: MenuItemProps | undefined = useMemo(() => 
@@ -56,17 +58,20 @@ const Menu: React.FC = () => {
       {
         fullscreenMenu && currentItem != null
           ? (
-            <Fragment>
+            <SlideDiv
+              className="m-slide"
+              onSlide={updateCurrentItemIndex}
+            >
               <MenuItem key={currentItemIndex} fullscreen {...currentItem} />
               <div className="m-arrows">
-                <button onClick={() => updateCurrentItemIndex(-1)}>
+                <button onClick={() => updateCurrentItemIndex(Direction.Left)}>
                   <FontAwesomeIcon icon={faArrowLeft} />
                 </button>
-                <button onClick={() => updateCurrentItemIndex(1)}>
+                <button onClick={() => updateCurrentItemIndex(Direction.Right)}>
                   <FontAwesomeIcon icon={faArrowRight} />
                 </button>
               </div>
-            </Fragment>
+            </SlideDiv>
           ) : config.ITEMS.map((item, i) => (
             <MenuItem key={i} {...item} />
           ))
