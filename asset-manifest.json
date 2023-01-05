@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.013f3cbc.css",
-    "main.js": "./static/js/main.31780340.js",
+    "main.js": "./static/js/main.933b9226.js",
     "static/media/lemon_pie1.jpg": "./static/media/lemon_pie1.540910582af40422fb34.jpg",
     "static/media/galette.jpg": "./static/media/galette.811f60263bea59cfa7d7.jpg",
     "static/media/parisbrest.jpg": "./static/media/parisbrest.f58e5ae26c7cb27b842a.jpg",
@@ -24,10 +24,10 @@
     "static/media/MoonTime-Regular.otf": "./static/media/MoonTime-Regular.a420eaa4638d6143b3cc.otf",
     "index.html": "./index.html",
     "main.013f3cbc.css.map": "./static/css/main.013f3cbc.css.map",
-    "main.31780340.js.map": "./static/js/main.31780340.js.map"
+    "main.933b9226.js.map": "./static/js/main.933b9226.js.map"
   },
   "entrypoints": [
     "static/css/main.013f3cbc.css",
-    "static/js/main.31780340.js"
+    "static/js/main.933b9226.js"
   ]
 }
