@@ -6,6 +6,7 @@ import Popup from "reactjs-popup";
 import "./MenuItem.less";
 
 export type MenuItemProps = {
+  fullscreen?: boolean;
   imageClassName: string;
   title: string;
   description: string;
@@ -13,12 +14,16 @@ export type MenuItemProps = {
 }
 
 const MenuItem: React.FC<MenuItemProps> = (props) => {
-  const { imageClassName, title, description, price } = props;
+  const { fullscreen, imageClassName, title, description, price } = props;
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="menu-item">
-      <div className={`mi-image ${imageClassName}`} onClick={() => setOpen(!open)} />
+    <div className={`menu-item${fullscreen? " mi-fullscreen" : ""}`}>
+      <div 
+        className={`mi-image ${imageClassName}`} 
+        onClick={() => setOpen(!open)}
+        title={title}
+      />
       <Popup
         open={open}
         onClose={() => setOpen(false)}
