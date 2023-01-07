@@ -3,17 +3,13 @@ import { MenuItemProps } from "./MenuItem/MenuItem";
 
 export const BASKET_KEY = "BasketKey";
 
+export const SCREEN_SIZE = 470;
+
 export const ORDER =  `Place order by contacting us: ${MAIL} / ${PHONE}. Orders must be placed at least 1 week beforehand, 3 weeks for orders having more than 2 kinds of cakes.`;
 export const DELIVERY = "We deliver in Copenhagen and Frederiksberg communes all days between 5 and 9 pm for 50 DKK. Orders can also be picked up at the atelier close to Øresund metro station.";
 export const MIN_NUMBER_TEXT = (x: number) => ` (min. ${x} pieces)`;
 
 export const ITEMS: MenuItemProps[] = [
-  {
-    imageClassName: "galette",
-    title: "Galette des rois",
-    description: "Honouring an old tradition of the Epiphany, this cake is available in 3 flavours: Classic almond-vanilla, chocolate-haselnut or chestnut. We are delivering the 'Galette des rois' on the 6th, 7th and 8th January 2023. ",
-    price: "250 DKK (6 persons)"
-  },
   {
     imageClassName: "lemonpie",
     title: "Lemon pie",

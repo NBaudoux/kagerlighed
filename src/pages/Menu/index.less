@@ -1,11 +1,50 @@
 @IMG_PATH: "../../shared/img/";
 
 .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.m-display, .m-arrows {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.m-display button{
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  color: #000000;
+  
+  &.active {
+    color: #008CBA;
+  }
+}
+
+.m-arrows button {
+  background-color: #008CBA;
+  border: none;
+  border-radius: 100%;
+  color: white;
+  padding: 10px 12px;
+  margin: 0 2px;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+      
+  &:hover {
+    background-color: #04ace4;
+  }
+}
+
+.m-slide {
+  width: 100%
 }
 
 .mi-text {
-    margin-left: 15px;
+  margin-left: 15px;
 }

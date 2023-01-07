@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
 import HeaderButton from "./components/HeaderButton/HeaderButton";
@@ -12,8 +12,6 @@ import * as config from "./config";
 import "./index.less";
 
 const Main: React.FC = () => {
-  const title = "Kagerlighed";
-
   const content = () => {
     switch(selectedTab){
     case 0: {
@@ -26,10 +24,14 @@ const Main: React.FC = () => {
 
   const [selectedTab, setSelectedTab] = useState<number>(0);
 
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, [selectedTab]);
+
   return (
     <>
       <div className="header">
-        <a href="index" className="home-shortcut">{title}</a>
+        <a href="index" className="home-shortcut">{config.TITLE}</a>
         {config.TABS.map((tab, i) => {
           return (
             <HeaderButton 
