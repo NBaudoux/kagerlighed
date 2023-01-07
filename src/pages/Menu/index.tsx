@@ -9,11 +9,16 @@ import "./images.less";
 import "./index.less";
 import Counter from "./MenuItem/Counter";
 import MenuItem, { MenuItemProps } from "./MenuItem/MenuItem";
+import OrderSystem from "./OrderSystem";
 
 const Menu: React.FC = () => {
+  const initialBasket = config.ITEMS.map(() => 0);
+  
   const [fullscreenMenu, setFullscreenMenu] = useState(window.innerWidth >= config.SCREEN_SIZE);
   const [currentItemIndex, setCurrentItemIndex] = useState<number>(0);
-  const [basket, setBasket] = useSessionStorage<(number | null)[]>(config.BASKET_KEY, config.ITEMS.map(() => 0));
+  const [basket, setBasket] = useSessionStorage<(number | null)[]>(config.BASKET_KEY, initialBasket);
+
+  const resetBasket = () => setBasket(initialBasket);
 
   const updateBasket = (i: number, value: number | null) => {
     const newBasket = [...basket];
@@ -81,15 +86,20 @@ const Menu: React.FC = () => {
                 </button>
               </div>
             </SlideDiv>
-          ) : config.ITEMS.map((item, i) => (
-            <MenuItem key={i} {...item} >
-              <Counter 
-                number={basket[i]}
-                setNumber={(x) => updateBasket(i, x)}
-                minNumber={item.minNumber}
-              />
-            </MenuItem>
-          ))
+          ) : (
+            <div>
+              <OrderSystem resetBasket={resetBasket} />
+              {config.ITEMS.map((item, i) => (
+                <MenuItem key={i} {...item} >
+                  <Counter 
+                    number={basket[i]}
+                    setNumber={(x) => updateBasket(i, x)}
+                    minNumber={item.minNumber}
+                  />
+                </MenuItem>
+              ))}
+            </div>
+          )
       }
     </div>  
   );
