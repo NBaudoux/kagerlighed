@@ -16,13 +16,17 @@ const Counter: React.FC<CounterProps> = (props) => {
 
   const addToNumber = (x: number) => {
     const currentValue = number ?? minNumber;
-    if (currentValue + x < minNumber) return;
-    setNumber(currentValue + x);
+    if (currentValue + x < minNumber) {
+      setNumber(x > 0 ? minNumber : 0);
+    }
+    else {
+      setNumber(currentValue + x);
+    }
   };
 
   const updateNumberFromString = (x: string, resetUnvalidValue: boolean) => {
     if (x === "") {
-      setNumber(resetUnvalidValue ? minNumber : null);
+      setNumber(resetUnvalidValue ? 0 : null);
     }
     else {
       const value = parseInt(x);
@@ -39,7 +43,7 @@ const Counter: React.FC<CounterProps> = (props) => {
     <div className="counter">
       <button 
         className="counter-button" 
-        disabled={number === minNumber || !number} 
+        disabled={number === 0} 
         onClick={() => addToNumber(-1)}
       >
         <FontAwesomeIcon icon={faMinus} />
