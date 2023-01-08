@@ -88,7 +88,7 @@ const Menu: React.FC = () => {
             </SlideDiv>
           ) : (
             <div>
-              <OrderSystem resetBasket={resetBasket} />
+              <OrderSystem basket={basket} resetBasket={resetBasket} />
               {config.ITEMS.map((item, i) => (
                 <MenuItem key={i} {...item} >
                   <Counter 
