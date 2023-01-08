@@ -7,6 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import Popup from "reactjs-popup";
 import { addDays } from "../../../shared/util/dateUtil";
 
+import { ITEMS as MENU_ITEMS } from "../config";
 import * as config from "./config";
 import "./index.less";
 
@@ -23,11 +24,26 @@ const OrderSystem: React.FC<OrderSystemProps> = (props) => {
 
   return(
     <div className="order-system">
-      <FontAwesomeIcon 
-        className="os-icon" 
-        icon={faCartShopping} 
-        title={config.BASKET}
-      />
+      <div className="os-basket">
+        <FontAwesomeIcon 
+          className="os-icon" 
+          icon={faCartShopping}
+          onClick={() => setOpenBasket(true)} 
+          title={config.BASKET}
+        />
+        <Popup
+          open={openBasket}
+          onClose={() => setOpenBasket(false)}
+          closeOnDocumentClick
+          position="top center"
+        >
+          {basket?.map((amount, i) => 
+            amount && amount > 0 
+              ? <div key={i}>{`${amount}x ${MENU_ITEMS[i].title}`}</div>
+              : null
+          )}
+        </Popup>
+      </div>
       <div className="os-calendar">
         <FontAwesomeIcon 
           className="os-icon" 
