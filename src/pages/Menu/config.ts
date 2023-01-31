@@ -10,19 +10,19 @@ export const ITEMS: MenuItemProps[] = [
   {
     imageClassName: "val-macaron-small",
     title: "Valentine's macarons",
-    description: "Small raspberry & chocolate flavoured macarons in heart shaped form. Available until 15th February.",
+    description: "Small raspberry & chocolate flavoured macarons in heart shaped form. Available until 19th February.",
     price: "125 DKK (100g.) - 225 DKK (200g.)"
   },
   {
     imageClassName: "val-macaron-big",
     title: "Valentine's large macaron",
-    description: "Large raspberry & vanilla flavoured macarons in heart shaped form. Available until 15th February.",
+    description: "Large raspberry & vanilla flavoured macaron in heart shaped form. Available until 19th February.",
     price: "230DKK"
   },
   {
     imageClassName: "val-cake",
     title: "Valentine's heart cake",
-    description: "6 persons raspberry & chocolate cake in heart shaped form. Available until 15th February.",
+    description: "6 persons raspberry & chocolate cake in heart shaped form. Available until 19th February.",
     price: "200 DKK"
   },
   {
