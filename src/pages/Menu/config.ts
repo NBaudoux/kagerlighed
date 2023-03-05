@@ -17,7 +17,7 @@ export const ITEMS: MenuItemProps[] = [
     imageClassName: "parisbrest-medium",
     title: "Paris-Brest",
     description: "Pastry originating from the bicycle race going from Paris to Brest, this famous haselnut cake doesn't need any further description.",
-    price: "70 DKK (1 person) - 200 DKK (6 persons)"
+    price: "70 DKK (1 person) - 220 DKK (6 persons)"
   },
   {
     imageClassName: "chocolate-caramel",
