@@ -11,12 +11,13 @@ export type MenuItemProps = {
   imageClassName: string;
   title: string;
   description: string;
-  price: string;
+  price: number;
+  priceText: string;
   minNumber?: number;
 }
 
 const MenuItem: React.FC<MenuItemProps> = (props) => {
-  const { fullscreen, imageClassName, title, description, price,  minNumber } = props;
+  const { fullscreen, imageClassName, title, description, priceText: price,  minNumber } = props;
   const [open, setOpen] = useState(false);
 
   return (
