@@ -1,6 +1,7 @@
 import { faArrowLeft, faArrowRight, faImages, faList } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useMemo, useState } from "react";
+import Infobox, { InfoType } from "../../components/Infobox";
 import SlideDiv, { Direction } from "../../shared/components";
 
 import * as config from "./config";
@@ -38,8 +39,8 @@ const Menu: React.FC = () => {
   return (
     <div className="menu">
       <div>
-        <p>{config.ORDER}</p>
-        <p>{config.DELIVERY}</p>
+        <Infobox infoType={InfoType.INFO}>{config.ORDER}</Infobox>
+        <Infobox infoType={InfoType.DELIVERY}>{config.DELIVERY}</Infobox>
       </div>
       <div className="m-display">
         <button 
