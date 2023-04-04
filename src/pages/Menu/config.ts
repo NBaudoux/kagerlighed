@@ -1,7 +1,7 @@
 import { MAIL, PHONE } from "../../config";
 import { MenuItemProps } from "./MenuItem";
 
-export const SCREEN_SIZE = 470;
+export const SCREEN_SIZE = 950;
 
 export const ORDER =  `Place order by contacting us: ${MAIL} / ${PHONE}. Orders must be placed at least 1 week beforehand, 3 weeks for orders having more than 2 kinds of cakes.`;
 export const DELIVERY = "We deliver in Copenhagen and Frederiksberg communes all days between 5 and 9 pm for 50 DKK. Orders can also be picked up at the atelier close to Øresund metro station.";
