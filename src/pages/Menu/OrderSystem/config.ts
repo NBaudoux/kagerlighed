@@ -12,7 +12,8 @@ export const ORDER_SUMMARY = "Your order's summary: ";
 export const PHONE = "Phone: ";
 export const PRICE = "Price: ";
 export const RESET = "Reset order";
-export const YES = "YES";
+export const SEND = "Send";
+export const YES = "Yes";
 export const ZIP = "Postal code: ";
 
 export const MAX_DATE = 8640000000000000;

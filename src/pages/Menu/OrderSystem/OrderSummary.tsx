@@ -4,6 +4,8 @@ import { ITEMS as MENU_ITEMS } from "../config";
 import * as config from "./config";
 import OrderDatePicker, { OrderDatePickerProps } from "./OrderDatePicker";
 
+import "./OrderSummary.less";
+
 type OrderSummaryProps = OrderDatePickerProps & {
   basket: (number|null)[];
 };
@@ -22,7 +24,7 @@ const OrderSummary: React.FC<OrderSummaryProps> = (props) => {
       <Fragment>
         {basket?.map((amount, i) => 
           amount && amount > 0 
-            ? <div className="os-summary-item" key={i}>
+            ? <div className="oss-item" key={i}>
               {`${amount}x ${MENU_ITEMS[i].title}`}
             </div>
             : null
@@ -40,35 +42,38 @@ const OrderSummary: React.FC<OrderSummaryProps> = (props) => {
 
   return(
     <div className="os-summary">
-      <span>{config.ORDER_SUMMARY}</span>
+      <div>{config.ORDER_SUMMARY}</div>
       {listBasketItems()}
-      <span>{config.DELIVERY_DATE}</span>
-      <OrderDatePicker 
-        deliveryDate={deliveryDate}
-        setDeliveryDate={setDeliveryDate}
-      />
-      <div>
-        <span>{`${config.PRICE}: ${computePrice()}DKK`}</span>
+      <div className="oss-line">
+        <span className="oss-label">{config.DELIVERY_DATE}</span>
+        <OrderDatePicker 
+          deliveryDate={deliveryDate}
+          setDeliveryDate={setDeliveryDate}
+        />
+      </div>
+      <div className="oss-line">
+        <span>{config.PRICE}</span>
+        <span>{` ${computePrice()}DKK`}</span>
       </div>
       <form>
-        <div>
-          <span>{config.NAME}</span>
-          <input type="text" id="name" name="name" />
+        <div className="oss-line">
+          <span className="oss-label">{config.NAME}</span>
+          <input className="oss-input" type="text" id="name" name="name" />
         </div>
-        <div>
-          <span>{config.EMAIL}</span>
-          <input type="email" id="email" name="email" />
+        <div className="oss-line">
+          <span className="oss-label">{config.EMAIL}</span>
+          <input className="oss-input" type="email" id="email" name="email" />
         </div>
-        <div>
-          <span>{config.PHONE}</span>
-          <input type="tel" id="tel" name="tel" />
+        <div className="oss-line">
+          <span className="oss-label">{config.PHONE}</span>
+          <input className="oss-input" type="tel" id="tel" name="tel" />
         </div>
-        <div>
-          <span>{config.ADDRESS}</span>
-          <input type="text" id="address" name="address" />
+        <div className="oss-line">
+          <span className="oss-label">{config.ADDRESS}</span>
+          <input className="oss-input" type="text" id="address" name="address" />
         </div>
-        <div>
-          <span>{config.ZIP}</span>
+        <div className="oss-line">
+          <span className="oss-label">{config.ZIP}</span>
           <input 
             type="number" 
             id="zip" 
@@ -77,27 +82,32 @@ const OrderSummary: React.FC<OrderSummaryProps> = (props) => {
             value={zip}
           />
         </div>
-        <div title={!isZipAllowed ? config.DELIVERY_DISABLED : ""}>
-          <span>{config.DELIVERY}</span>
-          <input 
-            type="radio" 
-            id="delivery_yes"
-            checked={deliveryActivated}
-            disabled={!isZipAllowed}
-            name="delivery" 
-            onClick={() => setDelivery(true)}    
-          />
-          <label htmlFor="delivery_yes">{config.YES}</label>
-          <input 
-            type="radio" 
-            id="delivery_no" 
-            checked={!deliveryActivated}
-            disabled={!isZipAllowed}
-            name="delivery" 
-            onClick={() => setDelivery(false)} 
-          />
-          <label htmlFor="delivery_no">{config.NO}</label>
+        <div className="oss-line" title={!isZipAllowed ? config.DELIVERY_DISABLED : ""}>
+          <span className="oss-label">{config.DELIVERY}</span>
+          <div>
+            <input 
+              className="oss-input" 
+              type="radio" 
+              id="delivery_yes"
+              checked={deliveryActivated}
+              disabled={!isZipAllowed}
+              name="delivery" 
+              onClick={() => setDelivery(true)}    
+            />
+            <label htmlFor="delivery_yes">{config.YES}</label>
+            <input 
+              className="oss-input" 
+              type="radio" 
+              id="delivery_no" 
+              checked={!deliveryActivated}
+              disabled={!isZipAllowed}
+              name="delivery" 
+              onClick={() => setDelivery(false)} 
+            />
+            <label htmlFor="delivery_no">{config.NO}</label>
+          </div>
         </div>
+        <button className="oss-button button" formAction="submit">{config.SEND}</button>
       </form>
     </div>
   );
