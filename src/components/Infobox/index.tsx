@@ -13,11 +13,13 @@ export enum InfoType {
 
 type InfoboxProps = {
   infoType: InfoType;
+  hide?: boolean;
 }
 
 const Infobox: React.FC<InfoboxProps> = (props) => {
   
-  const { infoType } = props;
+  const { infoType, hide } = props;
+  const hidden = hide ? " hidden" : "";
 
   const getTypesIcon = () => {
     switch(infoType) {
@@ -33,7 +35,7 @@ const Infobox: React.FC<InfoboxProps> = (props) => {
   };
 
   return (
-    <div className={`infobox ${infoType}`}>
+    <div className={`infobox ${infoType}${hidden}`}>
       <FontAwesomeIcon className="ib-icon" icon={getTypesIcon()} />
       <span>{props.children}</span>
     </div>
