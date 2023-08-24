@@ -39,6 +39,13 @@ const Menu: React.FC = () => {
   return (
     <div className="menu">
       <div>
+        <Infobox 
+          infoType={InfoType.WARN} 
+          hide={config.CLOSED_UNTIL < new Date()}
+        >
+          {config.HOLIDAY}
+        </Infobox>
+        
         <Infobox infoType={InfoType.INFO}>{config.ORDER}</Infobox>
         <Infobox infoType={InfoType.DELIVERY}>{config.DELIVERY}</Infobox>
       </div>
