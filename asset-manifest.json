@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.013f3cbc.css",
-    "main.js": "./static/js/main.10f921cd.js",
+    "main.js": "./static/js/main.520a3c7f.js",
     "static/media/val-macaron-big.jpg": "./static/media/val-macaron-big.9a4b12c680a35f20f21b.jpg",
     "static/media/val-macaron-small.jpg": "./static/media/val-macaron-small.0c57ed26119aa29187fc.jpg",
     "static/media/val-cake.jpg": "./static/media/val-cake.b79dde2ba8de11ce7186.jpg",
@@ -27,10 +27,10 @@
     "static/media/MoonTime-Regular.otf": "./static/media/MoonTime-Regular.a420eaa4638d6143b3cc.otf",
     "index.html": "./index.html",
     "main.013f3cbc.css.map": "./static/css/main.013f3cbc.css.map",
-    "main.10f921cd.js.map": "./static/js/main.10f921cd.js.map"
+    "main.520a3c7f.js.map": "./static/js/main.520a3c7f.js.map"
   },
   "entrypoints": [
     "static/css/main.013f3cbc.css",
-    "static/js/main.10f921cd.js"
+    "static/js/main.520a3c7f.js"
   ]
 }
