@@ -56,5 +56,11 @@ export const ITEMS: MenuItemProps[] = [
     title: "Mignardises (min. 50 pieces)",
     description: "Small cakes for your birthday party or office event, easy to eat and enjoy. A mix of classic lemon/meringue pie, the chocolate/caramel tart and the pistachio and raspberry financier.",
     price: "(pr. piece) 15 DKK"
+  },
+  {
+    imageClassName: "gaufres",
+    title: "Belgian waffles (Gaufres de Liège)",
+    description: "The famous belgian waffles from Liège are made from a denser and sweeter dough than its Brussels' cousin. You can either warm them up at home or eat it right away, with or without topping. ",
+    price: "80 DKK (5 pieces) - 150 DKK (10 pieces)"
   }
 ];
