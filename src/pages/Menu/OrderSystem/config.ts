@@ -1,8 +1,10 @@
 import { addDays } from "../../../shared/util/dateUtil";
 
+export const DELIVERY_PRICE = 50; 
+
 export const ADDRESS = "Address: ";
 export const BASKET = "Basket";
-export const DELIVERY = "Delivery: ";
+export const DELIVERY = `Delivery (${DELIVERY_PRICE}DKK): `;
 export const DELIVERY_DATE = "Delivery date";
 export const DELIVERY_DISABLED = "Your order cannot be delivered at your location";
 export const EMAIL = "Email: ";
@@ -22,7 +24,6 @@ export const EXCLUDED_DAYS: {start: Date, end: Date}[] = [
   {start: addDays(new Date(), 60), end: new Date(MAX_DATE)}
 ];
 
-export const DELIVERY_PRICE = 50; 
 export const IS_ZIP_ALLOWED = (zip: string) => {
   const parsedZip = parseInt(zip);
   return !Number.isNaN(zip) && 1000 < parsedZip && parsedZip <= 2500;
