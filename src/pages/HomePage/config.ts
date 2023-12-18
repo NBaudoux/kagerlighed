@@ -9,6 +9,10 @@ export const SLIDE_IMAGES: SlideImage[] = [
     caption: "Lemon pie"
   },
   {
+    styleName: "chocolate-caramel-slideshow",
+    caption: "Chocolate & caramel"
+  },
+  {
     styleName: "mignardises",
     caption: "Mignardises"
   },
