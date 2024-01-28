@@ -19,7 +19,7 @@ export const ITEMS: MenuItemProps[] = [
     imageClassName: "parisbrest-medium",
     title: "Paris-Brest",
     description: "Pastry originating from the bicycle race going from Paris to Brest, this famous haselnut dessert is made of choux pastry and a praline flavoured cream.",
-    price: "70 DKK (1 person) - 220 DKK (6 persons)"
+    price: "50 DKK (1 person) - 220 DKK (6 persons)"
   },
   {
     imageClassName: "chocolate-caramel",
@@ -43,7 +43,7 @@ export const ITEMS: MenuItemProps[] = [
     imageClassName: "chocolate-tonka",
     title: "Chocolate & tonka cake",
     description: "A full chocolate cake with the delicious flavor of the carabean tonka bean and a crunchy croustillant praliné.", 
-    price: "50 DKK (1 person) - 250 DKK (6 persons)"
+    price: "70 DKK (1 person) - 250 DKK (6 persons)"
   },
   {
     imageClassName: "parisbrest-small",
