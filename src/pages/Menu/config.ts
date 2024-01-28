@@ -3,18 +3,12 @@ import { MenuItemProps } from "./MenuItem";
 
 export const SCREEN_SIZE = 950;
 
-export const CLOSED_UNTIL = new Date(2024, 0, 2);
+export const CLOSED_UNTIL = new Date(2024, 1, 12);
 export const HOLIDAY = `We are currently closed until ${CLOSED_UNTIL.toLocaleDateString("da-dk")}`;
 export const ORDER =  `Place order by contacting us: ${MAIL} / ${PHONE}. Orders must be placed at least 1 week beforehand, 3 weeks for orders having more than 2 kinds of cakes.`;
 export const DELIVERY = "We deliver in Copenhagen and Frederiksberg communes all days between 5 and 9 pm for 50 DKK. Orders can also be picked up at the atelier close to Øresund metro station.";
 
 export const ITEMS: MenuItemProps[] = [
-  {
-    imageClassName: "galette",
-    title: "Galette des rois",
-    description: "Honouring an old tradition of the Epiphany, this cake is available in 3 flavours: Classic almond-vanilla, chocolate-hazelnut or chestnut. Available from 6th until 28th January 2024",
-    price: "250 DKK (6 persons)"
-  },
   {
     imageClassName: "lemonpie",
     title: "Lemon pie",
