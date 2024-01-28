@@ -62,5 +62,17 @@ export const ITEMS: MenuItemProps[] = [
     title: "Belgian waffles (Gaufres de Liège)",
     description: "The famous belgian waffles from Liège are made from a denser and sweeter dough than its Brussels' cousin. You can either warm them up at home or eat it right away, with or without topping. ",
     price: "80 DKK (5 pieces) - 150 DKK (10 pieces)"
+  },
+  {
+    imageClassName: "foretnoire",
+    title: "Black forest",
+    description: "",
+    price: "Coming soon"
+  },
+  {
+    imageClassName: "millefeuilles",
+    title: "Mille feuilles",
+    description: "",
+    price: "Coming soon"
   }
 ];
