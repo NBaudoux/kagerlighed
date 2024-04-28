@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "./static/css/main.013f3cbc.css",
-    "main.js": "./static/js/main.903261fd.js",
+    "main.js": "./static/js/main.9a745b5f.js",
     "static/media/val-macaron-big.jpg": "./static/media/val-macaron-big.9a4b12c680a35f20f21b.jpg",
     "static/media/val-macaron-small.jpg": "./static/media/val-macaron-small.0c57ed26119aa29187fc.jpg",
     "static/media/val-cake.jpg": "./static/media/val-cake.b79dde2ba8de11ce7186.jpg",
+    "static/media/charlotte.jpg": "./static/media/charlotte.b73216609a72f4114711.jpg",
     "static/media/lemon_pie1.jpg": "./static/media/lemon_pie1.540910582af40422fb34.jpg",
     "static/media/gaufres.jpg": "./static/media/gaufres.7dcd7ea84f7377224d86.jpg",
     "static/media/millefeuilles.jpg": "./static/media/millefeuilles.67b06c627bd07b5c0b26.jpg",
@@ -24,16 +25,15 @@
     "static/media/DMSans-Medium.ttf": "./static/media/DMSans-Medium.150680530af9dd9fd00b.ttf",
     "static/media/parisbrest-s.jpg": "./static/media/parisbrest-s.c8eb72ccaaea883c1318.jpg",
     "static/media/chocolate_tonka.jpg": "./static/media/chocolate_tonka.36c46a22ee1834834ce9.jpg",
-    "static/media/charlotte.jpg": "./static/media/charlotte.aeffd5ac9884c10fb837.jpg",
     "static/media/MoonTime-Regular.ttf": "./static/media/MoonTime-Regular.b83db42eb10b3fc7bd0f.ttf",
     "static/media/logo1.jpg": "./static/media/logo1.364663fdf2261ca4b45c.jpg",
     "static/media/MoonTime-Regular.otf": "./static/media/MoonTime-Regular.a420eaa4638d6143b3cc.otf",
     "index.html": "./index.html",
     "main.013f3cbc.css.map": "./static/css/main.013f3cbc.css.map",
-    "main.903261fd.js.map": "./static/js/main.903261fd.js.map"
+    "main.9a745b5f.js.map": "./static/js/main.9a745b5f.js.map"
   },
   "entrypoints": [
     "static/css/main.013f3cbc.css",
-    "static/js/main.903261fd.js"
+    "static/js/main.9a745b5f.js"
   ]
 }
