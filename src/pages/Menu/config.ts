@@ -40,6 +40,18 @@ export const ITEMS: MenuItemProps[] = [
     price: "45 DKK (1 person) - 220 DKK (6 persons)"
   },
   {
+    imageClassName: "millefeuilles",
+    title: "Mille feuilles",
+    description: "French classic made of layers of puff pastry alternating with vanilla pastry cream with a touch of caramel.",
+    price: "200 DKK (6 persons)"
+  },
+  {
+    imageClassName: "foretnoire",
+    title: "Black forest",
+    description: "Chocolate & cream cake with cherry filling & cherries on the top.",
+    price: "250 DKK (6 persons)"
+  },
+  {
     imageClassName: "chocolate-tonka",
     title: "Chocolate & tonka cake",
     description: "A full chocolate cake with the delicious flavor of the carabean tonka bean and a crunchy croustillant praliné.", 
@@ -62,17 +74,5 @@ export const ITEMS: MenuItemProps[] = [
     title: "Belgian waffles (Gaufres de Liège)",
     description: "The famous belgian waffles from Liège are made from a denser and sweeter dough than its Brussels' cousin. You can either warm them up at home or eat it right away, with or without topping. ",
     price: "80 DKK (5 pieces) - 150 DKK (10 pieces)"
-  },
-  {
-    imageClassName: "foretnoire",
-    title: "Black forest",
-    description: "",
-    price: "Coming soon"
-  },
-  {
-    imageClassName: "millefeuilles",
-    title: "Mille feuilles",
-    description: "",
-    price: "Coming soon"
-  }
+  },  
 ];
