@@ -39,7 +39,7 @@ const MenuItem: React.FC<MenuItemProps> = (props) => {
         <div className="mi-title">
           <h3>{title}</h3>
         </div>
-        <div className="mi-desc">{description}</div>
+        <div className="mi-desc">{description.split("\n").map((line, index) => <div key={index}>{line}</div>)}</div>
         <div className="mi-price">
           <span>{price}</span>
         </div>

@@ -66,7 +66,7 @@ export const ITEMS: MenuItemProps[] = [
   {
     imageClassName: "mignardises",
     title: "Mignardises (min. 50 pieces)",
-    description: "Small cakes for your birthday party or office event, easy to eat and enjoy. A mix of classic lemon/meringue pie, the chocolate/caramel tart and the pistachio and raspberry financier.",
+    description: "Small cakes for your birthday party or office event, easy to eat and enjoy. You can choose to mix up to 3 of the following flavours:\n -Lemon & meringue tarts\n-Chocolate & caramel tart\n-Pistachio financier & raspberry\n-Marble cake/Rocher glaze\n-Raspberry tarts\n-Strawberry tarts",
     price: "(pr. piece) 15 DKK"
   },
   {
